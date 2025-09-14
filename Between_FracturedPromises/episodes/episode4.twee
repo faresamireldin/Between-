@@ -1,0 +1,15 @@
+:: Episode 4 - The Sister-in-Law
+/*
+This is a placeholder for Episode 4.
+This episode would likely feature Olivia, the sharp and judgmental sister-in-law,
+perhaps during the dinner mentioned in Episode 1.
+*/
+
+<div class="story-narrative">
+    <p>The weekend arrives. Dinner with Olivia. You can already feel the tension.</p>
+    <p class="instruction">[[Begin dinner->Olivia Confrontation]]</p>
+</div>
+
+:: Olivia Confrontation
+<p>End of Episode 4 placeholder.</p>
+[[Continue->Episode 5 - The Coworker]]

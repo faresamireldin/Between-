@@ -1,0 +1,60 @@
+/*
+ * home.css
+ *
+ * Styles for the fake phone home screen UI.
+ * - App grid layout
+ * - Battery and WiFi icon styling
+ * - Wallpaper blur effect
+ * - Notification dot styles
+ */
+
+.phone-home-screen {
+    /* Main container for the home screen */
+    background-image: url('../assets/backgrounds/bg_home.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+.phone-home-screen::before {
+    /* Wallpaper blur overlay */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(5px);
+}
+
+.top-bar {
+    /* Styles for the top status bar (time, battery) */
+}
+
+.app-grid {
+    /* Styles for the grid of apps */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.app-icon {
+    /* Styles for a single app icon */
+}
+
+.notification-dot {
+    /* Styles for the notification dots on apps */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.notification-dot.blue {
+    background-color: var(--color-trust-blue);
+}
+
+.notification-dot.red {
+    background-color: var(--color-danger-red);
+}

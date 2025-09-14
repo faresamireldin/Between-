@@ -1,0 +1,27 @@
+{
+  "name": "Between: Fractured Promises",
+  "ifid": "A-UNIQUE-STORY-ID-WILL-GO-HERE",
+  "startnode": "1",
+  "creator": "Tweego",
+  "creator-version": "2.1.1",
+  "passages": [
+    {
+      "pid": "1",
+      "name": "Start",
+      "tags": ["splash-screen"],
+      "text": ":: Start\n<div class='splash-content'>\n  <img src='assets/logo/logo.png' alt='Between: Fractured Promises' class='logo-main'>\n  <div class='broken-heart-icon'></div>\n  <p class='tagline'>Love, Lies, Consequences.</p>\n  [[Begin->Welcome]]\n</div>"
+    },
+    {
+      "pid": "2",
+      "name": "Welcome",
+      "tags": ["welcome-screen"],
+      "text": ":: Welcome\n<div class='welcome-content'>\n  <img src='assets/logo/logo_alt.png' alt='Between: Fractured Promises' class='logo-small'>\n  <div class='menu'>\n    <a href='javascript:void(0)' class='menu-button start-game'>Start</a>\n    <a href='javascript:void(0)' class='menu-button continue-game'>Continue</a>\n    <a href='javascript:void(0)' class='menu-button settings'>Settings</a>\n  </div>\n  <a href='javascript:void(0)' class='credits-link'>About / Credits</a>\n</div>"
+    },
+    {
+        "pid": "3",
+        "name": "Phone Home",
+        "tags": ["home-screen"],
+        "text": ":: Phone Home\n<div class='phone-home-ui'>\n    <div class='top-bar'>\n        <span class='time'>9:41 PM</span>\n        <div class='status-icons'>\n            <span class='wifi-icon'></span>\n            <span class='battery-icon'></span>\n        </div>\n    </div>\n    <div class='app-grid'>\n        <div class='app' data-app='messenger'>\n            <img src='assets/icons/app_messenger.png' alt='Messenger'>\n            <span>Messenger</span>\n            <div class='notification-dot blue' style='display: none;'></div>\n        </div>\n        <div class='app' data-app='makelove'>\n            <img src='assets/icons/app_makelove.png' alt='Makelove'>\n            <span>Makelove</span>\n            <div class='notification-dot red' style='display: none;'></div>\n        </div>\n    </div>\n</div>"
+    }
+  ]
+}

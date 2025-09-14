@@ -1,0 +1,59 @@
+/*
+ * global.css
+ *
+ * Base styles for the entire game.
+ * - Typography (fonts, sizes, colors)
+ * - Layout grid and basic structure
+ * - Core color palette
+ * - Global animations and transitions
+ */
+
+:root {
+    /* Color Palette based on emotional coding */
+    --color-trust-blue: #2a7fdb; /* Trust, loyalty (Ethan, Messenger) */
+    --color-danger-red: #e60023; /* Danger, temptation, secrets */
+    --color-playful-orange: #ff8c00; /* Playfulness, disruption (Olivia, Liam) */
+    --color-neutral-grey: #808080; /* Neutral UI elements */
+    --color-family-grey: #f0f0f0; /* Incoming message bubbles */
+    --color-makelove-burgundy: #800020; /* Makelove app theme */
+    --color-makelove-neon-pink: #ff007f; /* Makelove incoming messages */
+
+    --color-text-light: #ffffff;
+    --color-text-dark: #1c1c1c;
+
+    /* Backgrounds */
+    --bg-dark-moody: #121212;
+    --bg-light: #ffffff;
+
+    /* Fonts */
+    --font-primary: 'Helvetica Neue', sans-serif;
+    --font-serif-fractured: 'Times New Roman', serif; /* Placeholder for fractured font */
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-dark-moody);
+    color: var(--color-text-light);
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling on the main body */
+}
+
+#game-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Basic pulse animation for hover effects */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse-animation {
+    animation: pulse 1.5s infinite;
+}

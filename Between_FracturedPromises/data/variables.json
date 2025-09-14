@@ -1,0 +1,17 @@
+{
+  "description": "Default starting variables for a new game.",
+  "trust": 50,
+  "romance": 0,
+  "suspicion": 10,
+  "current_episode": 1,
+  "player_name": "Nadia",
+  "unlocked_gallery_photos": {
+    "nadia": ["default1.jpg", "default2.jpg"],
+    "ethan": [],
+    "daniel": [],
+    "claire": [],
+    "olivia": [],
+    "liam": []
+  },
+  "endings_unlocked": []
+}

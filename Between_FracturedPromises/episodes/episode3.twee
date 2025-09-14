@@ -1,0 +1,15 @@
+:: Episode 3 - The Friend
+/*
+This is a placeholder for Episode 3.
+This episode would likely involve Claire, the best friend,
+reacting to Nadia's recent behavior or the situation with Ethan.
+*/
+
+<div class="messenger-screen">
+    <p>A message from Claire. She always knows when something's up.</p>
+    <p class="instruction">[[Read message->Claire Chat 1]]</p>
+</div>
+
+:: Claire Chat 1
+<p>End of Episode 3 placeholder.</p>
+[[Continue->Episode 4 - The Sister-in-Law]]

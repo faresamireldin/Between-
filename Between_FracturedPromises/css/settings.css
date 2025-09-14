@@ -1,0 +1,55 @@
+/*
+ * settings.css
+ *
+ * Styles for the settings screen.
+ * - Toggles and sliders design
+ * - Save/load button styling
+ * - Minimalist layout
+ */
+
+.settings-screen {
+    /* Main container for the settings menu */
+    background-color: var(--bg-dark-moody);
+    padding: 20px;
+}
+
+.settings-option {
+    /* Style for a single settings option row */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.settings-label {
+    /* The text label for a setting */
+    font-size: 1.1em;
+}
+
+.toggle-switch {
+    /* Styles for a toggle switch */
+}
+
+.slider {
+    /* Styles for a volume or speed slider */
+}
+
+.save-load-button {
+    /* Styles for the save/load buttons */
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    text-align: center;
+    background-color: var(--color-trust-blue);
+    border: none;
+    border-radius: 5px;
+    color: var(--color-text-light);
+    cursor: pointer;
+}
+
+.reset-button {
+    /* Special styling for the dangerous reset button */
+    background-color: var(--color-danger-red);
+}

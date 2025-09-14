@@ -1,0 +1,50 @@
+/*
+ * makelove.css
+ *
+ * Styles for the Makelove chat app.
+ * - Burgundy and neon theme
+ * - Subtle pulse highlights on new messages
+ * - Dark, seductive aesthetic
+ */
+
+.makelove-screen {
+    /* Main container for the Makelove app */
+    background: linear-gradient(to bottom, var(--color-makelove-burgundy), #000000);
+    color: var(--color-text-light);
+}
+
+.chat-bubble.makelove-incoming {
+    /* Style for incoming messages (neon pink) */
+    background-color: transparent;
+    border: 1px solid var(--color-makelove-neon-pink);
+    color: var(--color-makelove-neon-pink);
+    box-shadow: 0 0 10px var(--color-makelove-neon-pink);
+    animation: pulse-glow 2s infinite;
+}
+
+.chat-bubble.makelove-outgoing {
+    /* Style for outgoing messages (pale orange-red) */
+    background-color: #ff4500; /* Placeholder orange-red */
+    color: var(--color-text-light);
+}
+
+@keyframes pulse-glow {
+    0% { box-shadow: 0 0 5px var(--color-makelove-neon-pink); }
+    50% { box-shadow: 0 0 15px var(--color-makelove-neon-pink); }
+    100% { box-shadow: 0 0 5px var(--color-makelove-neon-pink); }
+}
+
+.screen-glitch-effect {
+    /* For occasional glitch animations during tense moments */
+    animation: glitch 0.5s infinite;
+}
+
+@keyframes glitch {
+    /* A simple glitch effect */
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}

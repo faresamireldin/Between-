@@ -1,0 +1,50 @@
+:: StoryTitle
+Between: Fractured Promises
+
+:: StoryData
+{
+  "ifid": "A-UNIQUE-STORY-ID-SHOULD-BE-GENERATED-HERE",
+  "format": "SugarCube",
+  "format-version": "2.36.1",
+  "start": "Splash Screen"
+}
+
+:: StoryInit
+/* This passage runs once at the very beginning of the story. */
+/* Initialize game variables based on variables.json */
+<<set $trust to 50>>
+<<set $romance to 0>>
+<<set $suspicion to 10>>
+
+/* Character data */
+<<set $player to { name: "Nadia" }>>
+<<set $husband to { name: "Ethan" }>>
+<<set $affair to { name: "Daniel" }>>
+<<set $friend to { name: "Claire" }>>
+
+:: Splash Screen [splash-screen]
+<div class='splash-content'>
+  <img src='assets/logo/logo.png' alt='Between: Fractured Promises' class='logo-main'>
+  <div class='broken-heart-icon'></div>
+  <p class='tagline'>Love, Lies, Consequences.</p>
+  [[Begin->Welcome Menu]]
+</div>
+
+:: Welcome Menu [welcome-screen]
+<div class='welcome-content'>
+  <img src='assets/logo/logo_alt.png' alt='Between: Fractured Promises' class='logo-small'>
+  <div class='menu'>
+    [[Start Game->Episode 1 - The Crack]]
+    [[Continue|Welcome Menu]]
+    [[Settings|Welcome Menu]]
+  </div>
+  <a href='javascript:void(0)' class='credits-link'>About / Credits</a>
+</div>
+
+/*
+NOTE TO DEVS:
+The rest of the story is in the /episodes/ folder.
+A Twine compiler like Tweego should be used to build the final story from these source files.
+Example command: tweego -o story.html .
+This will combine story.twee and all .twee files in the episodes/ directory.
+*/

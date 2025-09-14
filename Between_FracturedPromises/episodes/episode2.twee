@@ -1,0 +1,29 @@
+:: Episode 2 - First Message
+/*
+This is the beginning of Episode 2.
+The story would continue from here, likely with a message from Daniel on the Makelove app.
+*/
+
+<div class="phone-home-ui-content">
+    <p>A few hours later, your phone buzzes. A notification from an app you barely use.</p>
+    <p class="instruction">[[Check the Makelove App->Daniel Chat 1]]</p>
+</div>
+
+:: Daniel Chat 1 [makelove-screen]
+/*
+This passage would introduce Daniel, the affair interest.
+His chat screen would have the distinct "makelove" theme.
+*/
+
+<div class="chat-container">
+    <div class="chat-header">
+        <span class="name">Daniel Hayes</span>
+    </div>
+    <div class="chat-messages">
+        <div class="chat-bubble makelove-incoming">I saw you the other day. You looked bored.</div>
+    </div>
+    <div class="chat-choices">
+        <p>End of Episode 2 placeholder.</p>
+        [[Continue->Episode 3 - The Friend]]
+    </div>
+</div>

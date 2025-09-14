@@ -1,0 +1,44 @@
+/*
+ * gallery.css
+ *
+ * Styles for the photo gallery.
+ * - Grid view for thumbnails
+ * - Swipe animations
+ * - Lightbox modal for full-screen view
+ */
+
+.gallery-grid {
+    /* Styles for the grid of photo thumbnails */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 5px;
+}
+
+.gallery-thumbnail {
+    /* Styles for a single photo thumbnail */
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.lightbox-modal {
+    /* Styles for the full-screen photo viewer */
+    display: none; /* Shown via JS */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    /* The image itself inside the lightbox */
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* Styles for swipe animations can be added here */

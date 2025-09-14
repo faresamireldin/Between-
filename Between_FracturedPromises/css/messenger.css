@@ -1,0 +1,47 @@
+/*
+ * messenger.css
+ *
+ * Styles for the Messenger chat screen.
+ * - Blue and white chat bubble design
+ * - Typing dots animation
+ * - Layout for the chat header and input field
+ */
+
+.messenger-screen {
+    /* Main container for the messenger view */
+    background-color: var(--bg-light);
+    color: var(--color-text-dark);
+}
+
+.chat-header {
+    /* Styles for the header with avatar and name */
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.chat-bubble {
+    /* Base style for a chat bubble */
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 70%;
+    margin-bottom: 10px;
+}
+
+.chat-bubble.incoming {
+    /* Style for incoming messages (left, grey-white) */
+    background-color: var(--color-family-grey);
+    align-self: flex-start;
+}
+
+.chat-bubble.outgoing {
+    /* Style for outgoing messages (right, blue) */
+    background-color: var(--color-trust-blue);
+    color: var(--color-text-light);
+    align-self: flex-end;
+}
+
+.typing-indicator {
+    /* Styles for the '...' typing animation */
+}

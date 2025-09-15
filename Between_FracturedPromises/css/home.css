@@ -1,0 +1,61 @@
+/*
+ * home.css
+ *
+ * Styles for the fake phone home screen UI.
+ * - App grid layout
+ * - Top status bar (time, battery)
+ * - Wallpaper with blur effect
+ * - Notification dot styles
+ */
+
+.home-screen #story {
+    background: url('../assets/backgrounds/bg_home.jpg') no-repeat center center;
+    background-size: cover;
+    color: var(--color-text-light);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-screen #story::before {
+    /* Wallpaper blur overlay */
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+    backdrop-filter: blur(2px);
+}
+
+/* Ensure content is above the blur overlay */
+.home-screen #story > * {
+    position: relative;
+    z-index: 2;
+}
+
+.phone-home-ui-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.phone-home-ui-content p {
+    font-size: 1.2em;
+}
+
+.phone-home-ui-content .instruction a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgba(255,255,255,0.2);
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}

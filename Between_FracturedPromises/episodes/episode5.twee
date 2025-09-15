@@ -1,0 +1,15 @@
+:: Episode 5 - The Coworker
+/*
+This is a placeholder for Episode 5.
+This episode could introduce Liam, the playful coworker,
+offering a different kind of distraction or path for Nadia.
+*/
+
+<div class="messenger-screen">
+    <p>A message from a number you don't recognize, but the tone is familiar. It must be Liam from work.</p>
+    <p class="instruction">[[See what he wants->Liam Chat 1]]</p>
+</div>
+
+:: Liam Chat 1
+<p>End of Episode 5 placeholder.</p>
+[[Continue->Episode 6 - The Point of No Return]]

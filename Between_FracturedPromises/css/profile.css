@@ -1,0 +1,56 @@
+/*
+ * profile.css
+ *
+ * Styles for the character profile screens.
+ * - Avatar frame and layout
+ * - Bio and info card styling
+ * - Badge design and placement
+ */
+
+.profile-screen {
+    /* Main container for a character profile */
+    padding: 20px;
+}
+
+.profile-avatar {
+    /* Styles for the large circular avatar */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--color-neutral-grey);
+    margin: 0 auto;
+    display: block;
+}
+
+.profile-name {
+    /* Styles for the character's name */
+    text-align: center;
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+.profile-badge {
+    /* Styles for the verification badges */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.badge-blue { background-image: url('../assets/badges/badge_blue.png'); }
+.badge-orange { background-image: url('../assets/badges/badge_orange.png'); }
+
+.profile-bio {
+    /* Styles for the short bio/status line */
+    text-align: center;
+    font-style: italic;
+    color: var(--color-neutral-grey);
+}
+
+.info-card {
+    /* Styles for the card containing traits, age, etc. */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+}

@@ -1,0 +1,61 @@
+/*
+ * makelove.css
+ *
+ * Styles for the Makelove chat app.
+ * - Burgundy and neon theme
+ * - Subtle pulse highlights on new messages
+ * - Dark, seductive aesthetic
+ */
+
+.makelove-screen #story {
+    background: linear-gradient(to bottom, var(--color-makelove-burgundy), #000000);
+    color: var(--color-text-light);
+}
+
+/* Re-use chat structure from messenger.css but with different colors */
+.makelove-screen .chat-header {
+    border-bottom: 1px solid var(--color-makelove-neon-pink);
+    background-color: transparent;
+    justify-content: center; /* Center the name */
+}
+
+.makelove-screen .chat-header .name {
+    font-family: var(--font-serif-fractured); /* Use a more stylish font */
+    font-size: 1.5em;
+    color: var(--color-makelove-neon-pink);
+}
+
+.makelove-screen .chat-bubble.incoming {
+    background-color: transparent;
+    border: 1px solid var(--color-makelove-neon-pink);
+    color: var(--color-makelove-neon-pink);
+    box-shadow: 0 0 10px var(--color-makelove-neon-pink);
+    animation: pulse-glow 2s infinite;
+}
+
+.makelove-screen .chat-bubble.outgoing {
+    background-color: #ff4500; /* A pale orange-red */
+    color: var(--color-text-light);
+    border: 1px solid #ff8c00;
+}
+
+.makelove-screen .chat-choices .choice a {
+    background-color: transparent;
+    border: 1px solid var(--color-danger-red);
+    color: var(--color-danger-red);
+}
+
+.makelove-screen .chat-choices .choice a:hover {
+    background-color: var(--color-danger-red);
+    color: var(--color-text-light);
+}
+
+@keyframes pulse-glow {
+    0% { box-shadow: 0 0 5px var(--color-makelove-neon-pink); }
+    50% { box-shadow: 0 0 15px var(--color-makelove-neon-pink); }
+    100% { box-shadow: 0 0 5px var(--color-makelove-neon-pink); }
+}
+
+.makelove-screen .typing-indicator span {
+    background-color: var(--color-makelove-neon-pink);
+}

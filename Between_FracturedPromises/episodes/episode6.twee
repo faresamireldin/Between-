@@ -1,0 +1,23 @@
+:: Episode 6 - The Point of No Return
+/*
+This is a placeholder for Episode 6.
+This would be the climax of the story, where Nadia must make a final,
+consequential choice that leads to one of the endgame scenarios.
+*/
+
+<div class="story-narrative">
+    <p>Everything has come to a head. A text from Ethan. A notification from Makelove. You can't ignore them any longer.</p>
+    <p>Who do you answer?</p>
+</div>
+
+<div class="final-choice">
+    <p class="instruction">[[Choose Ethan->Ending - Reconciliation]]</p>
+    <p class="instruction">[[Choose Daniel->Ending - Temptation]]</p>
+</div>
+
+
+:: Ending - Reconciliation
+<p>This path leads to an endgame screen where the marriage is potentially saved.</p>
+
+:: Ending - Temptation
+<p>This path leads to an endgame screen where Nadia falls to temptation.</p>

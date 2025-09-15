@@ -1,0 +1,53 @@
+:: Episode 1 - The Crack [home-screen]
+<div class="phone-home-ui-content">
+    <p>A notification from Ethan. You haven't spoken all day.</p>
+    <p class="instruction">[[Open Messenger->Ethan Chat 1]]</p>
+</div>
+
+:: Ethan Chat 1 [messenger-screen]
+<div class="chat-container">
+    <div class="chat-header">
+        <img src="assets/avatars/ethan.png" class="avatar">
+        <span class="name">Ethan Carter</span>
+        <img src="assets/badges/badge_blue.png" class="badge">
+    </div>
+    <div class="chat-messages">
+        <div class="chat-bubble incoming">Hey. You okay? Seemed quiet today.</div>
+    </div>
+    <div class="chat-choices">
+        <div class="choice">[[I'm fine, just tired.|Ethan Response 1a]]</div>
+        <div class="choice">[[Just been a long day. What's up?|Ethan Response 1b]]</div>
+    </div>
+</div>
+
+:: Ethan Response 1a
+<<set $trust to $trust + 2>>
+<<set $suspicion to $suspicion - 1>>
+You reply: <span class="player-reply">"I'm fine, just tired."</span>
+<br><br>
+[[He starts typing...->Ethan Chat 2]]
+
+:: Ethan Response 1b
+<<set $trust to $trust - 1>>
+<<set $suspicion to $suspicion + 2>>
+You reply: <span class="player-reply">"Just been a long day. What's up?"</span>
+<br><br>
+[[He starts typing...->Ethan Chat 2]]
+
+:: Ethan Chat 2 [messenger-screen]
+<div class="chat-container">
+    <div class="chat-header">
+        <img src="assets/avatars/ethan.png" class="avatar">
+        <span class="name">Ethan Carter</span>
+    </div>
+    <div class="chat-messages">
+        <div class="chat-bubble incoming">Hey. You okay? Seemed quiet today.</div>
+        <div class="chat-bubble outgoing">...</div>
+        <div class="chat-bubble incoming typing-indicator"><span></span><span></span><span></span></div>
+        <div class="chat-bubble incoming" data-reveal-delay="2000">Just making sure. Don't forget we have dinner with Olivia this weekend. Please don't be late this time.</div>
+    </div>
+    <div class="chat-choices" data-reveal-delay="3000">
+        <p>End of Episode 1.</p>
+        [[Continue->Episode 2 - First Message]]
+    </div>
+</div>

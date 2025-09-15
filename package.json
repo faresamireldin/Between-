@@ -1,0 +1,17 @@
+{
+  "name": "between-fractured-promises",
+  "version": "1.0.0",
+  "description": "A narrative-driven game of love, lies, and consequences.",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && mkdir -p dist && cp -r Between_FracturedPromises/css dist/ && cp -r Between_FracturedPromises/scripts dist/ && cp -r Between_FracturedPromises/assets dist/ && ./tweego -f sugarcube-2 -o dist/index.html Between_FracturedPromises && ls -R dist",
+    "start": "http-server dist -c-1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

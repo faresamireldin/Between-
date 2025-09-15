@@ -1,0 +1,60 @@
+/*
+ * splash.css
+ *
+ * Styles for the splash screen and intro animations.
+ */
+
+#passages.splash-screen {
+    background-color: #000000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+#passages.splash-screen .passage {
+    padding: 0;
+}
+
+.splash-content {
+    animation: fadeIn 2s forwards;
+}
+
+.splash-content .logo-main {
+    max-width: 80%;
+    animation: shimmer 3s infinite 1s;
+}
+
+.splash-content .tagline {
+    font-size: 1.2em;
+    color: var(--color-neutral-grey);
+    margin-top: 10px;
+}
+
+.splash-content .passage-link {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 30px;
+    border: 1px solid var(--color-trust-blue);
+    border-radius: 20px;
+    color: var(--color-trust-blue);
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.splash-content .passage-link:hover {
+    background-color: var(--color-trust-blue);
+    color: white;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes shimmer {
+    0% { filter: brightness(1); }
+    50% { filter: brightness(1.5); }
+    100% { filter: brightness(1); }
+}

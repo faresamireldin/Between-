@@ -1,5 +1,5 @@
 :: StoryStylesheet [stylesheet]
-/* Import all game CSS files. These paths are relative to the final HTML file in /dist. */
+/* Import all game CSS files. Paths are relative to the final HTML file in /dist */
 @import url("css/global.css");
 @import url("css/splash.css");
 @import url("css/welcome.css");
@@ -13,11 +13,7 @@
 @import url("css/endgame.css");
 
 :: StoryScript [script]
-/*
-  Import all game JavaScript modules using SugarCube's importScripts macro.
-  The paths are relative to the final HTML file in /dist.
-  The main.js script, which orchestrates the others, must be loaded last.
-*/
+/* Import all game JavaScript modules using SugarCube's importScripts macro */
 <<importScripts
     "scripts/save.js",
     "scripts/sound.js",
@@ -28,13 +24,18 @@
     "scripts/main.js"
 >>
 
-/* This is a good place for custom widgets that can be used throughout the story */
+/* Custom widgets */
 <<widget "mainmenu">>
     <div class='welcome-content'>
-      <img src='assets/logo/logo_alt.png' alt='Between: FracturedPromises' class='logo-small'>
-      <div class='menu'>
-        <<link "Start Game" "Episode 1 - The Crack">><</link>>
-        <<link "Continue" "Splash Screen">><</link>>
+        <img src='assets/logo/logo_alt.png' alt='Between: FracturedPromises' class='logo-small'>
+        <div class='menu'>
+            <<link "Start Game" "Episode 1 - The Crack">><</link>>
+            <<link "Continue" "Splash Screen">><</link>>
+            <<link "Settings" "Splash Screen">><</link>>
+        </div>
+        <a href='javascript:void(0)' class='credits-link'>About / Credits</a>
+    </div>
+<</widget>>        <<link "Continue" "Splash Screen">><</link>>
         <<link "Settings" "Splash Screen">><</link>>
       </div>
       <a href='javascript:void(0)' class='credits-link'>About / Credits</a>

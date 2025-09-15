@@ -3,7 +3,7 @@ name: Build and Deploy to GitHub Pages
 on:
   push:
     branches:
-      - feat/create-project-skeleton
+      - patch-1
 
 permissions:
   contents: write # Needed to push to the gh-pages branch

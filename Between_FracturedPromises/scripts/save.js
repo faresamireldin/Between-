@@ -2,73 +2,44 @@
  * save.js
  *
  * Handles the save and load system for the game.
- * - Manages game state variables (trust, romance, suspicion).
- * - Interacts with localStorage to persist progress.
- * - Handles autosaves at key decision points.
+ * This module is now designed to integrate with SugarCube's state.
  */
 
 const SaveSystem = {
-    gameState: {
-        trust: 50,
-        romance: 0,
-        suspicion: 10,
-        currentPassage: 'Start',
-        unlockedGallery: []
-    },
-
     init() {
-        console.log("Save System Initialized.");
-        this.loadGame('autosave'); // Automatically load progress
+        console.log("Save System Initialized and integrated with SugarCube.");
+        // We don't need to load from localStorage here, as SugarCube's
+        // own save system handles that automatically. We just need to
+        // ensure our initial variables are set if no save exists.
+
+        // The default variables are set in the StoryInit passage in story.twee
     },
 
     /**
-     * Saves the current game state to localStorage.
-     * @param {string} slotName The name of the save slot (e.g., 'save1', 'autosave').
-     */
-    saveGame(slotName) {
-        try {
-            const stateJson = JSON.stringify(this.gameState);
-            localStorage.setItem(`between_${slotName}`, stateJson);
-            console.log(`Game saved to slot: ${slotName}`);
-        } catch (e) {
-            console.error("Error saving game:", e);
-        }
-    },
-
-    /**
-     * Loads a game state from localStorage.
-     * @param {string} slotName The name of the save slot to load.
-     * @returns {boolean} True if the load was successful, false otherwise.
-     */
-    loadGame(slotName) {
-        try {
-            const stateJson = localStorage.getItem(`between_${slotName}`);
-            if (stateJson) {
-                this.gameState = JSON.parse(stateJson);
-                console.log(`Game loaded from slot: ${slotName}`, this.gameState);
-                // After loading, the game engine should redirect to gameState.currentPassage
-                return true;
-            }
-            return false;
-        } catch (e) {
-            console.error("Error loading game:", e);
-            return false;
-        }
-    },
-
-    /**
-     * Updates a specific variable in the game state.
+     * Updates a specific variable in SugarCube's game state.
      * @param {string} key The variable to update (e.g., 'trust').
      * @param {*} value The new value.
      */
     setVariable(key, value) {
-        if (key in this.gameState) {
-            this.gameState[key] = value;
-            console.log(`Game state updated: ${key} = ${value}`);
+        if (State.variables.hasOwnProperty(key)) {
+            State.variables[key] = value;
+            console.log(`SugarCube state updated: ${key} = ${State.variables[key]}`);
+            // No need to manually save; SugarCube handles this on passage navigation.
         } else {
             console.warn(`Attempted to set unknown game state variable: ${key}`);
         }
+    },
+
+    /**
+     * A helper to get a variable from SugarCube's state.
+     * @param {string} key The variable to get.
+     * @returns The value of the variable, or null if not found.
+     */
+    getVariable(key) {
+        if (State.variables.hasOwnProperty(key)) {
+            return State.variables[key];
+        }
+        console.warn(`Attempted to get unknown game state variable: ${key}`);
+        return null;
     }
 };
-
-document.addEventListener('DOMContentLoaded', () => SaveSystem.init());

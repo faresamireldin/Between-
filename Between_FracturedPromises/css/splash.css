@@ -2,39 +2,59 @@
  * splash.css
  *
  * Styles for the splash screen and intro animations.
- * - Logo fade-in and shimmer effects
- * - Background styling
- * - Controls the transition to the Welcome Page
  */
 
-.splash-screen {
-    /* Styles for the splash screen container */
-    background-color: var(--bg-dark-moody);
-    /* background-image: url('../assets/backgrounds/bg_splash.jpg'); */
-    background-size: cover;
-    background-position: center;
+#passages.splash-screen {
+    background-color: #000000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
 }
 
-.splash-screen .logo {
-    /* Styles for the main game logo */
-    opacity: 0;
-    animation: fadeIn 2s forwards, shimmer 3s infinite 2s;
+#passages.splash-screen .passage {
+    padding: 0;
 }
+
+.splash-content {
+    animation: fadeIn 2s forwards;
+}
+
+.splash-content .logo-main {
+    max-width: 80%;
+    animation: shimmer 3s infinite 1s;
+}
+
+.splash-content .tagline {
+    font-size: 1.2em;
+    color: var(--color-neutral-grey);
+    margin-top: 10px;
+}
+
+.splash-content .passage-link {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 30px;
+    border: 1px solid var(--color-trust-blue);
+    border-radius: 20px;
+    color: var(--color-trust-blue);
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.splash-content .passage-link:hover {
+    background-color: var(--color-trust-blue);
+    color: white;
+}
+
 
 @keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes shimmer {
-    0% {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0);
-    }
-    50% {
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.3);
-    }
-    100% {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0);
-    }
+    0% { filter: brightness(1); }
+    50% { filter: brightness(1.5); }
+    100% { filter: brightness(1); }
 }

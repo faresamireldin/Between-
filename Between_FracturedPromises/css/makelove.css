@@ -7,14 +7,25 @@
  * - Dark, seductive aesthetic
  */
 
-.makelove-screen {
-    /* Main container for the Makelove app */
+.makelove-screen #story {
     background: linear-gradient(to bottom, var(--color-makelove-burgundy), #000000);
     color: var(--color-text-light);
 }
 
-.chat-bubble.makelove-incoming {
-    /* Style for incoming messages (neon pink) */
+/* Re-use chat structure from messenger.css but with different colors */
+.makelove-screen .chat-header {
+    border-bottom: 1px solid var(--color-makelove-neon-pink);
+    background-color: transparent;
+    justify-content: center; /* Center the name */
+}
+
+.makelove-screen .chat-header .name {
+    font-family: var(--font-serif-fractured); /* Use a more stylish font */
+    font-size: 1.5em;
+    color: var(--color-makelove-neon-pink);
+}
+
+.makelove-screen .chat-bubble.incoming {
     background-color: transparent;
     border: 1px solid var(--color-makelove-neon-pink);
     color: var(--color-makelove-neon-pink);
@@ -22,9 +33,20 @@
     animation: pulse-glow 2s infinite;
 }
 
-.chat-bubble.makelove-outgoing {
-    /* Style for outgoing messages (pale orange-red) */
-    background-color: #ff4500; /* Placeholder orange-red */
+.makelove-screen .chat-bubble.outgoing {
+    background-color: #ff4500; /* A pale orange-red */
+    color: var(--color-text-light);
+    border: 1px solid #ff8c00;
+}
+
+.makelove-screen .chat-choices .choice a {
+    background-color: transparent;
+    border: 1px solid var(--color-danger-red);
+    color: var(--color-danger-red);
+}
+
+.makelove-screen .chat-choices .choice a:hover {
+    background-color: var(--color-danger-red);
     color: var(--color-text-light);
 }
 
@@ -34,17 +56,6 @@
     100% { box-shadow: 0 0 5px var(--color-makelove-neon-pink); }
 }
 
-.screen-glitch-effect {
-    /* For occasional glitch animations during tense moments */
-    animation: glitch 0.5s infinite;
-}
-
-@keyframes glitch {
-    /* A simple glitch effect */
-    0% { transform: translate(0); }
-    20% { transform: translate(-2px, 2px); }
-    40% { transform: translate(-2px, -2px); }
-    60% { transform: translate(2px, 2px); }
-    80% { transform: translate(2px, -2px); }
-    100% { transform: translate(0); }
+.makelove-screen .typing-indicator span {
+    background-color: var(--color-makelove-neon-pink);
 }

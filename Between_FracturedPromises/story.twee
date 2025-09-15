@@ -3,7 +3,7 @@ Between: Fractured Promises
 
 :: StoryData
 {
-  "ifid": "A-UNIQUE-STORY-ID-SHOULD-BE-GENERATED-HERE",
+  "ifid": "5B2C5A56-78A3-4A44-8A1B-12C8C35F9226",
   "format": "SugarCube",
   "format-version": "2.36.1",
   "start": "Splash Screen"
@@ -31,15 +31,7 @@ Between: Fractured Promises
 </div>
 
 :: Welcome Menu [welcome-screen]
-<div class='welcome-content'>
-  <img src='assets/logo/logo_alt.png' alt='Between: Fractured Promises' class='logo-small'>
-  <div class='menu'>
-    [[Start Game->Episode 1 - The Crack]]
-    [[Continue|Welcome Menu]]
-    [[Settings|Welcome Menu]]
-  </div>
-  <a href='javascript:void(0)' class='credits-link'>About / Credits</a>
-</div>
+<<widget "mainmenu">>
 
 /*
 NOTE TO DEVS:

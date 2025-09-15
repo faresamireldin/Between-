@@ -3,31 +3,27 @@
  *
  * Base styles for the entire game.
  * - Typography (fonts, sizes, colors)
- * - Layout grid and basic structure
  * - Core color palette
- * - Global animations and transitions
+ * - Main phone container styling
  */
 
 :root {
-    /* Color Palette based on emotional coding */
-    --color-trust-blue: #2a7fdb; /* Trust, loyalty (Ethan, Messenger) */
-    --color-danger-red: #e60023; /* Danger, temptation, secrets */
-    --color-playful-orange: #ff8c00; /* Playfulness, disruption (Olivia, Liam) */
-    --color-neutral-grey: #808080; /* Neutral UI elements */
-    --color-family-grey: #f0f0f0; /* Incoming message bubbles */
-    --color-makelove-burgundy: #800020; /* Makelove app theme */
-    --color-makelove-neon-pink: #ff007f; /* Makelove incoming messages */
-
+    /* Color Palette */
+    --color-trust-blue: #007aff;
+    --color-danger-red: #ff3b30;
+    --color-playful-orange: #ff9500;
+    --color-neutral-grey: #8e8e93;
+    --color-family-grey: #e5e5ea;
+    --color-makelove-burgundy: #800020;
+    --color-makelove-neon-pink: #ff007f;
     --color-text-light: #ffffff;
-    --color-text-dark: #1c1c1c;
-
-    /* Backgrounds */
+    --color-text-dark: #1c1c1e;
     --bg-dark-moody: #121212;
-    --bg-light: #ffffff;
+    --bg-light: #f2f2f7;
 
     /* Fonts */
-    --font-primary: 'Helvetica Neue', sans-serif;
-    --font-serif-fractured: 'Times New Roman', serif; /* Placeholder for fractured font */
+    --font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-serif-fractured: 'Times New Roman', serif; /* Placeholder */
 }
 
 body {
@@ -36,24 +32,48 @@ body {
     color: var(--color-text-light);
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevent scrolling on the main body */
 }
 
-#game-container {
-    width: 100vw;
-    height: 100vh;
+/* SugarCube's main container */
+#story {
+    /* Center the phone in the middle of the screen */
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
-/* Basic pulse animation for hover effects */
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+/* This is the container for all passage content */
+#passages {
+    width: 100%;
+    height: 100%;
+    max-width: 414px; /* iPhone 11 Pro Max width */
+    max-height: 896px; /* iPhone 11 Pro Max height */
+    background-color: var(--bg-light);
+    color: var(--color-text-dark);
+    border-radius: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4), inset 0 0 0 2px #444;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.5s ease;
 }
 
-.pulse-animation {
-    animation: pulse 1.5s infinite;
+/* The content of a single passage */
+.passage {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Default link style */
+a.passage-link {
+    color: var(--color-trust-blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+a.passage-link:hover {
+    text-decoration: underline;
 }

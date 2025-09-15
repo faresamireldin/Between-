@@ -1,0 +1,57 @@
+/*
+ * welcome.css
+ *
+ * Styles for the main welcome/menu screen.
+ */
+
+#passages.welcome-screen {
+    background-color: #000;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.welcome-content .logo-small {
+    max-width: 60%;
+    margin-bottom: 40px;
+}
+
+.welcome-content .menu {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.welcome-content .menu a {
+    display: block;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: transform 0.2s ease-out;
+}
+
+.welcome-content .menu a:hover {
+    transform: scale(1.05);
+}
+
+/* "Start Game" button style */
+.welcome-content .menu a:first-child {
+    background-color: var(--color-danger-red);
+    color: white;
+}
+
+/* "Continue" and "Settings" button styles */
+.welcome-content .menu a:not(:first-child) {
+    background-color: #333;
+    color: white;
+}
+
+.credits-link {
+    margin-top: 40px;
+    color: var(--color-neutral-grey);
+    text-decoration: none;
+}
